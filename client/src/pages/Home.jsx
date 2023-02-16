@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Loader, Card, FormField } from "../components";
-const SERVER_URL="https://imagegenerator-2a8h.onrender.com/";
+const SERVER_URL="https://imagegenerator-2a8h.onrender.com";
 
 const RenderCards = ({data,title}) =>{
 
@@ -13,7 +13,7 @@ const Home = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch(`${SERVER_URL}save`);
+        const response = await fetch(`${SERVER_URL}/save`);
         if(!response.ok) return alert("something went wrong")
         const data = await response.json();
         if (data.success) {

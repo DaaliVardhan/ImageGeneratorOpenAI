@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { preview } from "../assets";
 import { getRandomPrompt } from "../utils";
 import { FormField, Loader } from "../components";
-const SERVER_URL="https://imagegenerator-2a8h.onrender.com/";
+const SERVER_URL="https://imagegenerator-2a8h.onrender.com";
 
 const CreatePost = () => {
   
