@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Loader, Card, FormField } from "../components";
+const SERVER_URL="https://localhost:800";
 
 const RenderCards = ({data,title}) =>{
 
@@ -12,7 +13,7 @@ const Home = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/save`);
+        const response = await fetch(`${SERVER_URL}save`);
         if(!response.ok) return alert("something went wrong")
         const data = await response.json();
         if (data.success) {
