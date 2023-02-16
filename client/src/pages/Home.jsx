@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Loader, Card, FormField } from "../components";
-const SERVER_URL="https://localhost:800";
+const SERVER_URL="https://imagegenerator-2a8h.onrender.com/";
 
 const RenderCards = ({data,title}) =>{
 
