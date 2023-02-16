@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { preview } from "../assets";
 import { getRandomPrompt } from "../utils";
 import { FormField, Loader } from "../components";
-
+const SERVER_URL="https://imagegenerator-2a8h.onrender.com"
 const CreatePost = () => {
   
 
@@ -12,7 +12,7 @@ const CreatePost = () => {
     try {
       setLoading(true)
       if(form.name && form.prompt && form.photo){
-        const response= await fetch(`http://localhost:8000/save`,{
+        const response= await fetch(`${SERVER_URL}/save`,{
           method:"POST",
           headers:{
             "Content-Type":"application/json"
@@ -46,7 +46,7 @@ const CreatePost = () => {
     if(form.prompt){
       try {
         setGeneratingImg(true)
-        const response = await fetch(`http://localhost:8000/getImg`,{
+        const response = await fetch(`${SERVER_URL}/getImg`,{
           method:"POST",
           headers:{
             "Content-Type":"application/json"
