@@ -11,6 +11,7 @@ const app = express()
 app.use(cors({
     origin: 'https://daalivardhan.github.io'
 }))
+app.options('*', cors());
 app.use(express.json({limit:"50mb"}))
 app.use("/getImg",postRoute)
 app.use("/save",saveRoute)
